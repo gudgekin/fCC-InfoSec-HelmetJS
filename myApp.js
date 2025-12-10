@@ -8,7 +8,8 @@ app.use(helmet.frameguard({ action: 'deny' }));
 app.use(helmet.xssFilter());
 app.use(helmet.noSniff());
 app.use(helmet.ieNoOpen());
-
+let timeInSeconds = 7776000;
+app.use(helmet.hsts({ maxAge: timeInSeconds, force: true }));
 
 
 
