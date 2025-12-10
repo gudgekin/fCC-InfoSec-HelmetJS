@@ -7,6 +7,7 @@ app.use(helmet.hidePoweredBy({ setTo: 'hello'}));
 app.use(helmet.frameguard({ action: 'deny' }));
 app.use(helmet.xssFilter());
 app.use(helmet.noSniff());
+app.use(helmet.ieNoOpen());
 
 
 
