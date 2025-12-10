@@ -11,6 +11,7 @@ app.use(helmet.ieNoOpen());
 let timeInSeconds = 7776000;
 app.use(helmet.hsts({ maxAge: timeInSeconds, force: true }));
 app.use(helmet.dnsPrefetchControl());
+app.use(helmet.noCache());
 
 
 
